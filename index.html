@@ -10,13 +10,12 @@
 
 <script>
 
-var a = document.createElement("a");
+var a = document.createElement('a');
 a.innerHTML = "Download File";
-var tb = new Blob(['abc'], {type:'text/plain'});
-a.download = 'tt.txt';
-a.href = window.URL.createObjectURL(tb);
+a.href = "data:application/octet-stream,"+encodeURIComponent("My DATA");
+a.download = 'abc.txt';
 document.body.appendChild(a);
-
+//a.click();
 
 </script>
 
